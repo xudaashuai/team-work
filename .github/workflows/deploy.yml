@@ -12,7 +12,7 @@ jobs:
     - name: Setup Node.js for use with actions
       uses: actions/setup-node@v1.1.0
     - run: npm install
-    - run: npm build
+    - run: npm run build
     - name: Deploy to Heroku
       uses: AkhileshNS/heroku-deploy@v2.0.2
      
