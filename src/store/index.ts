@@ -6,7 +6,7 @@ import Asana from 'asana';
 Vue.use(Vuex);
 const MY_TOKEN = '0/ffe3d2d21af059f8746751755e1f3181';
 const client = Asana.Client.create({
-  asanaBaseUrl: '/api/',
+  asanaBaseUrl: '/',
 }).useAccessToken(MY_TOKEN);
 Vue.prototype.$client = client;
 

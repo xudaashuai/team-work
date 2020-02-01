@@ -22,9 +22,6 @@ module.exports = {
         target: 'https://app.asana.com/',
         ws: true,
         changeOrigin: true,
-        pathRewrite: {
-          '^/api': '',
-        },
       },
     },
   },
