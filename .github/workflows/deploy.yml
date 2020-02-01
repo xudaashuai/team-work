@@ -1,0 +1,22 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Deploy to Heroku
+      uses: AkhileshNS/heroku-deploy@v2.0.2
+      with:
+        # This will be used for authentication. You can find it in your heroku homepage account settings
+        heroku_api_key: ${{ serects.HEROKU_API_KEY }}
+        # Email that you use with heroku
+        heroku_email: xudashuai0819@outlook.com
+        # The appname to use for deploying/updating
+        heroku_app_name: team-pp-work
+        # An optional buildpack to use when creating the heroku application
+        buildpack: nginx
